@@ -1,0 +1,37 @@
+class ClickButton extends React.Component {
+             
+           constructor(props) {
+               super(props);
+               this.state = {class: "off", label: "Нажми"};
+                 
+               this.press = this.press.bind(this);
+           }
+           press(){
+               let className = (this.state.class==="off")?"on":"off";
+               this.setState({class: className});
+           }
+           render() {
+               return <button onClick={this.press} className={this.state.class}>{this.state.label}</button>;
+           }
+       }
+         
+       ReactDOM.render(
+           <ClickButton />,
+            e.preventDefault();
+    const ID = e.target.elements.ID.value;
+    const time = e.target.elements.time.value;
+    const season=e.target.elements.season.value;
+    const api_call = await fetch(`http://http://46.101.236.211:1234/interview/time_slots);
+    const data = await api_call.json();
+    if ( ID && time && season) {
+      this.setState({
+        ID:"id";
+        time:"time";
+        season:"season";
+        error: ""
+      });
+    } else {
+      
+      });
+    }
+  }
